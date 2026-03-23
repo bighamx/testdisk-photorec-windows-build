@@ -1,50 +1,63 @@
-**TestDisk** checks the partition and boot sectors of your disks.
-It is very useful in recovering lost partitions.
+# TestDisk Windows Build
 
-It works with:
+This repository packages a Windows-friendly build workflow for `TestDisk`,
+`PhotoRec`, and `QPhotoRec`, based on the upstream
+[`cgsecurity/testdisk`](https://github.com/cgsecurity/testdisk) source tree.
 
-- DOS/Windows FAT12, FAT16 and FAT32
-- NTFS (Windows NT/2K/XP)
-- Linux Ext2 and Ext3
-- BeFS (BeOS)
-- BSD disklabel (FreeBSD/OpenBSD/NetBSD)
-- CramFS (Compressed File System)
-- HFS and HFS+, Hierarchical File System
-- JFS, IBM's Journaled File System
-- Linux Raid
-- Linux Swap (versions 1 and 2)
-- LVM and LVM2, Linux Logical Volume Manager
-- Netware NSS
-- ReiserFS 3.5, 3.6 and 4
-- Sun Solaris i386 disklabel
-- UFS and UFS2 (Sun/BSD/...)
-- XFS, SGI's Journaled File System
+It is intended for people who want:
 
-**PhotoRec** is file data recovery software designed to recover
-lost pictures from digital camera memory or even hard disks.
-It has been extended to search also for non audio/video headers.
+- ready-to-run Windows x64 release packages
+- a reproducible `MSYS2 + MinGW-w64 + Qt5` build flow
+- a simple public repository with build notes and release assets
 
-The whole list of file formats recovered by PhotoRec contains
-[more than 480 file extensions](https://www.cgsecurity.org/wiki/File_Formats_Recovered_By_PhotoRec) (about 300 file families).
+## Included tools
 
-TestDisk and PhotoRec run on:
+- `testdisk.exe`: partition recovery and partition table repair
+- `photorec.exe`: file recovery command-line tool
+- `qphotorec.exe`: Qt graphical interface for PhotoRec
+- `fidentify.exe`: file signature identification helper
 
-- DOS, Win 9x
-- Windows
-- Linux
-- FreeBSD, NetBSD, OpenBSD
-- SunOS
+## Releases
 
-Both are licensed under the GNU General Public License.
+Prebuilt Windows packages are published in GitHub Releases.
 
-See the [latest documentation](https://github.com/cgsecurity/testdisk_documentation)
-To build from source, read [INSTALL](INSTALL).
+- Qt build: includes `qphotorec.exe` and bundled Qt runtime
+- CLI build: includes `testdisk.exe`, `photorec.exe`, and `fidentify.exe`
 
-Additional Windows build notes for an `MSYS2 + MinGW-w64 + Qt5` workflow are
-available in [BUILD_WINDOWS_MSYS2_CN.md](BUILD_WINDOWS_MSYS2_CN.md).
+## Repository Layout
 
-Christophe GRENIER
-[grenier@cgsecurity.org](mailto:grenier@cgsecurity.org)
-[https://www.cgsecurity.org/](https://www.cgsecurity.org/)
+- [BUILD_WINDOWS_MSYS2_CN.md](BUILD_WINDOWS_MSYS2_CN.md): Windows build notes in Chinese
+- [USAGE_WINDOWS_EN.md](USAGE_WINDOWS_EN.md): end-user instructions in English
+- [USAGE_WINDOWS_CN.md](USAGE_WINDOWS_CN.md): end-user instructions in Chinese
+- [RELEASE_NOTES_windows-x64-qt.md](RELEASE_NOTES_windows-x64-qt.md): Qt release notes
+- [RELEASE_NOTES_windows-x64-cli.md](RELEASE_NOTES_windows-x64-cli.md): CLI release notes
+- [INSTALL](INSTALL): upstream generic build instructions
 
-[![Build Status](https://travis-ci.org/cgsecurity/testdisk.svg?branch=master)](https://travis-ci.org/cgsecurity/testdisk)
+## Build Summary
+
+The Windows builds in this repository were produced with:
+
+- Windows 11 x64
+- `MSYS2`
+- `mingw-w64-x86_64`
+- `Qt 5.15.18`
+
+The current packaged source snapshot tracks upstream commit:
+
+- `51df2f24c7de15e46c9ada329d59ef7ced180ba5`
+
+## Notes
+
+- This repository keeps the upstream source tree and adds packaging-oriented documentation.
+- The bundled Windows builds focus on a working, redistributable package.
+- Optional filesystem libraries such as `ext2fs`, `ntfs`, `ntfs-3g`, `ewf`, and `reiserfs` are not fully enabled in this packaged build.
+
+## Upstream Project
+
+The original project is maintained by Christophe GRENIER:
+
+- Upstream repository: [cgsecurity/testdisk](https://github.com/cgsecurity/testdisk)
+- Project site: [cgsecurity.org](https://www.cgsecurity.org/)
+- Upstream documentation: [testdisk_documentation](https://github.com/cgsecurity/testdisk_documentation)
+
+This repository is a redistribution and packaging effort for Windows users and is not the upstream project.
