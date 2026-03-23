@@ -31,3 +31,10 @@ Makefile
 # OS specific files
 *~
 .DS_Store
+*.log
+*.zip
+
+# Local build and release artifacts
+/build-mingw64/
+/build-mingw64-qt/
+/dist/
