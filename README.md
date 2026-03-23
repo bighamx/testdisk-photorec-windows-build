@@ -40,6 +40,9 @@ Both are licensed under the GNU General Public License.
 See the [latest documentation](https://github.com/cgsecurity/testdisk_documentation)
 To build from source, read [INSTALL](INSTALL).
 
+Additional Windows build notes for an `MSYS2 + MinGW-w64 + Qt5` workflow are
+available in [BUILD_WINDOWS_MSYS2_CN.md](BUILD_WINDOWS_MSYS2_CN.md).
+
 Christophe GRENIER
 [grenier@cgsecurity.org](mailto:grenier@cgsecurity.org)
 [https://www.cgsecurity.org/](https://www.cgsecurity.org/)
