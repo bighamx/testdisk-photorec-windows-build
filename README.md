@@ -43,3 +43,7 @@
 - 项目官网: [cgsecurity.org](https://www.cgsecurity.org/)
 
 **注意**：本仓库是一个分发布和打包项目，旨在方便 Windows 用户，并非上游官方仓库。
+
+## 许可证
+
+本仓库的构建脚本与打包配置采用 [Selective Freedom License (SFL) v1.0](https://github.com/bighamx/MIT-NoHuawei)（详见 [LICENSE](LICENSE)）。**打包的 TestDisk / PhotoRec / QPhotoRec 源码与二进制仍遵循上游 [GPL-2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) 许可证**，其版权归 Christophe GRENIER 及贡献者所有。

@@ -62,3 +62,7 @@ The original project is maintained by Christophe GRENIER:
 - Upstream documentation: [testdisk_documentation](https://github.com/cgsecurity/testdisk_documentation)
 
 This repository is a redistribution and packaging effort for Windows users and is not the upstream project.
+
+## License
+
+The build scripts and packaging configuration in this repository are licensed under the [Selective Freedom License (SFL) v1.0](https://github.com/bighamx/MIT-NoHuawei) (see [LICENSE](LICENSE)). **The bundled TestDisk / PhotoRec / QPhotoRec sources and binaries remain under the upstream [GPL-2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html) license**, copyright Christophe GRENIER and contributors.
